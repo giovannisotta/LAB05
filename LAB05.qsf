@@ -52,6 +52,46 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE Timing_Reference.vhd
+set_global_assignment -name BDF_FILE 7SEGDECODERBAR.bdf
+set_global_assignment -name BDF_FILE SEG_A.bdf
+set_global_assignment -name BDF_FILE SEG_B.bdf
+set_global_assignment -name BDF_FILE SEG_C.bdf
+set_global_assignment -name BDF_FILE SEG_D.bdf
+set_global_assignment -name BDF_FILE SEG_E.bdf
+set_global_assignment -name BDF_FILE SEG_F.bdf
+set_global_assignment -name BDF_FILE SEG_G.bdf
 set_global_assignment -name BDF_FILE LAB05.bdf
 set_global_assignment -name BDF_FILE next_state.bdf
 set_global_assignment -name BDF_FILE d3_logic.bdf
+set_global_assignment -name BDF_FILE d2_logic.bdf
+set_global_assignment -name BDF_FILE d1_logic.bdf
+set_global_assignment -name BDF_FILE d0_logic.bdf
+
+set_location_assignment PIN_C10 -to SW0
+set_location_assignment PIN_B8 -to PB0
+set_location_assignment PIN_A7 -to PB1
+set_instance_assignment -name IO_STANDARD "2.5 V SCHMITT TRIGGER" -to PB0
+set_instance_assignment -name IO_STANDARD "2.5 V SCHMITT TRIGGER" -to PB1
+set_location_assignment PIN_P11 -to CLK_50
+
+set_location_assignment PIN_C14 -to HEX0[0]
+set_location_assignment PIN_E15 -to HEX0[1]
+set_location_assignment PIN_C15 -to HEX0[2]
+set_location_assignment PIN_C16 -to HEX0[3]
+set_location_assignment PIN_E16 -to HEX0[4]
+set_location_assignment PIN_D17 -to HEX0[5]
+set_location_assignment PIN_C17 -to HEX0[6]
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+
+
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
